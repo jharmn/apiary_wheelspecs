@@ -9,7 +9,7 @@ Welcome to the documentation for the Wheelspecs API.
 Wheel resources
 The following is a section of resources related to wheels
 --
-List products added into your shopping-cart. (comment block again in Markdown)
+List products added into your shopping-cart.
 GET /wheels
 < 200
 < Content-Type: application/json
@@ -36,7 +36,32 @@ GET /wheels
   }
 ]}
 
-Save new products in your shopping cart
+Retrieve an existing wheel by Id
+GET /wheels/425
+< 200
+< Content-Type: application/json
+{  
+"id": "425",
+"brandId": "140",
+"brand": "Volk Racing", 
+"model":"TE-37", 
+"status": "current"", 
+"manufacturingMethod": "Forged", 
+"images": [
+    {
+        "url": "/Images/WheelModels/volk_te37limited.png",
+        "url": "/Images/WheelModels/volk_te37magnesium.png"
+    }    
+],
+"links": [
+    {
+        "type": "self", "url": "/Volk-Racing-TE37_wm425.aspx"
+        "type": "parent", "url": "/Volk-Racing_wb140.aspx"
+    }
+]
+}
+
+Create new wheels
 POST /wheels
 > Content-Type: application/json
 {  
