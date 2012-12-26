@@ -37,11 +37,11 @@ GET /wheels
 ]}
 
 Retrieve an existing wheel by Id
-GET /wheels/425
+GET /wheels/{wheelid}
 < 200
 < Content-Type: application/json
 {  
-"id": "425",
+"id": "{wheelid}",
 "brandId": "140",
 "brand": "Volk Racing", 
 "model":"TE-37", 
